@@ -25,7 +25,6 @@
 body {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
-  overflow-y: scroll;
   font-size: 0.93rem;
   font-family: var(--body-font);
   min-height: 100vh;
@@ -48,8 +47,8 @@ body::-webkit-scrollbar {
   background-color: var(--dark-blue);
   border-radius: 10px;
   width: 90%;
-  min-height: 27.8rem;
   max-width: fit-content;
+  min-height: 27.8rem;
   margin: 2rem 0;
 }
 
@@ -58,9 +57,9 @@ body::-webkit-scrollbar {
   display: inherit;
   position: relative;
   width: 75.5rem;
+  max-width: 100%;
   border-radius: 10px 10px 0px 0px;
   background-color: var(--soft-violet);
-  max-width: 100%;
 }
 img {
   width: 100%;
@@ -106,7 +105,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
 }
 
 .stats-text :nth-child(1) {
@@ -123,8 +121,10 @@ img {
 
 @media screen and (min-width: 900px) {
   .stats-card {
-    width: 80%;
+    width: 68rem;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
   .stats-card-image {
     border-radius: 0 10px 10px 0;
@@ -142,9 +142,12 @@ img {
   }
   .stats-card-cta {
     flex-direction: row;
-    justify-content: space-between;
-    gap: 2.5rem;
+    gap: 4rem;
+    justify-content: flex-start;
     margin-top: 2rem;
+  }
+  .stats-text {
+    align-items: start;
   }
 }
 
